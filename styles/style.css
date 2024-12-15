@@ -1,0 +1,828 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+  padding: 0;
+  margin: 0;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* general styling */
+
+@font-face {
+	font-family: 'Pakenham';
+	src: url('PAKENHAM-RG.otf')
+}
+
+
+html {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #202427;
+}
+
+:focus {
+	border: dashed 5px magenta;
+	transition: 0.2s;
+}
+
+:focus-visible {
+	border: dashed 5px magenta;
+	transition: 0.2s;
+}
+
+h2, h3 {
+	font-family: 'Pakenham';
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h4 {
+	color: #c9bebe;
+}
+
+ul {
+	list-style-type: none;
+}
+/* HEADER */
+
+/* TOP NAV */
+header > nav:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20%;
+    margin: auto;
+    height: 100%;
+    padding-block: 0.5em;
+} 
+
+/* newgrounds logo */
+header > nav:nth-of-type(1) > span:nth-of-type(1) {
+	cursor: pointer;
+}
+
+/* input field input */
+header > nav:nth-of-type(1) > span:nth-of-type(2) > input {
+    border-radius: 1em;
+	padding-inline: 10em;
+	padding-block: 0.25em;
+    background: gray;
+	box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    color: #202427;
+}
+
+header > nav:nth-of-type(1) > span:nth-of-type(2) > input::placeholder {
+	color: rgba(0, 0, 0, 0.8);
+	font-weight: bold;
+}
+
+/* top-right icons */
+header > nav:nth-of-type(1) > span:nth-of-type(3) > ul {
+	display: flex;
+	gap: 2.5em;
+
+	li {
+		cursor: pointer;
+	}
+}
+
+header > nav:nth-of-type(1) > span:nth-of-type(3) > ul > li > button {
+	background: none;
+	border: none;
+}
+
+/* BOTTOM NAV */
+header > nav:nth-of-type(2) {
+	background-color: black;
+	color: white;
+}
+
+header > nav:nth-of-type(2) > span {
+	margin-inline: 20%;
+	list-style-type: none;
+	text-align: center;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-evenly;
+}
+
+/* bottom nav boxes */
+header > nav:nth-of-type(2) > span > a {
+	text-decoration: none;
+	color: white;
+	padding: .8em;
+	flex-grow: 1;
+	flex: 1 1 0px;
+	box-shadow: none;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+header > nav:nth-of-type(2) > span > a:hover {
+	box-shadow: 0 0 0.1em 0.1em white inset;
+}
+
+/* bottom borders */
+header > nav:nth-of-type(2) > span > a:nth-of-type(1) {
+	border-bottom: solid .3em #f62f36;
+}
+
+header > nav:nth-of-type(2) > span > a:nth-of-type(2) {
+	border-bottom: solid .3em #2684de;
+}
+
+header > nav:nth-of-type(2) > span > a:nth-of-type(3) {
+	border-bottom: solid .3em #47b32a;
+}
+
+header > nav:nth-of-type(2) > span > a:nth-of-type(4) {
+	border-bottom: solid .3em #f136a1;
+}
+
+header > nav:nth-of-type(2) > span > a:nth-of-type(5) {
+	border-bottom: solid .3em #c64be2;
+}
+
+header > nav:nth-of-type(2) > span > a:nth-of-type(6) {
+	border-bottom: solid .3em #ec5216;
+}
+
+header > nav:nth-of-type(2) > span > a:nth-of-type(7) {
+	border-right: none;
+	border-bottom: solid .3em #f1b859;
+}
+
+@keyframes backgr {
+	from {
+	background-color: rgba(255, 0, 0, 0);
+	}
+	to {
+	background-color: rgba(255, 0, 0, 100);
+	}
+}
+
+/* background img */
+main > section:nth-of-type(1) {
+	display: block;
+	width: 100%;
+	background-image: url('//img.ngfiles.com/themes/000/2e63ba301721177992.webp?1721178004');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: scroll;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+/* ------------------------- */
+
+/* section:nth-of-type(1) = background-img */
+/* section:nth-of-type(2) = header of grid */
+
+/* grid outer part (outer) */
+main > section:nth-of-type(1) > div:first-of-type {
+	background: #22252A;
+	border-radius: .3em;
+	width: 60%;
+	height: auto;
+	margin-inline: 20%;
+	outline: solid 0.2em rgba(0, 0, 0, 0.8);
+}
+/* ------------- */
+
+/* main header (Featured Games + Featured Art) */
+main > section:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: inherit;
+    padding: 0.5em;
+    background-image: linear-gradient(#4D565D, #202427);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > h1 {
+	font-family: 'Pakenham';
+	font-size: 2em;
+}
+/* --------------------------------- */
+
+/* Featured games icon styling */
+main > section:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0.5);
+	width: 2.5em;
+	height: 2.5em;
+	vertical-align: middle;
+	border-radius: 0.3em;
+	margin-right: 0.5em;
+}	
+
+/* Featured games icon that goes inside of the div */
+main > section:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div > img {
+	width: 2em;
+	height: 2em;
+	background-repeat: no-repeat;
+	background-position: 0px -32.3em;
+	border-radius: 0.15em;
+	object-fit: contain;
+}
+
+/* Game Dev Forum button */
+main > section:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > button {
+    padding: 0.8em;
+	text-align: center;
+    border-radius: 0.4em;
+    border: 0;
+    font-weight: bold;
+	background-color: rgba(0,0,0,0.5);
+    color: #fda238;
+	cursor: pointer;
+}
+
+/* Hovering over Game Dev Forum button */
+main > section:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > button:hover {
+	background-color: #fda238;
+	color: rgba(0,0,0,0.5);
+    font-weight: 700;
+}
+
+/* Featured Games header */
+main > section:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > h2 {
+	flex-grow: 1;
+	text-align: left;
+}
+	
+/* grid inner part */
+main > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) {
+	display: grid;
+	background-color: #111;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 100%;
+	height: auto;
+	padding: 1em;
+	gap: 0.5em;
+} 
+/* --------------------- *
+
+
+/* grid items */
+main > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li {
+	border-radius: 0.4em;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 0.5em;
+
+	h3 {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: medium;
+		font-weight: bold;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	p {
+		font-size: smaller;
+		color: #c9bebe;
+	}
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li > button {
+	background: linear-gradient(to bottom, #34393D 0%, #34393D 60%, #4E575E 70%, #4E575E 100%);
+	margin-top: 0.4em;
+	border: 2px solid #34393D;
+	padding: 0.3em 0.5em;
+	color: #fda238;
+	font-weight: bold;
+	font-size: 1em;
+	border-radius: 5%;
+	cursor: pointer;
+}
+/* ------------------------- 
+
+/* maturity indicator */
+main > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li > div:nth-of-type(1) {
+	display: inline;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li > div:nth-of-type(1) > img {
+	width: 1.2em;
+    height: auto;
+    position: absolute;
+}
+/* ----------------------- */
+
+/* clip-path */
+main > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li > img {
+	width: 95%;
+	/* height: 100; */
+	clip-path: polygon(0 28px, 1px 26px, 2px 25px, 4px 24px, 18px 24px, 20px 23px, 21px 22px, 22px 20px, 22px 4px, 23px 2px, 24px 1px, 26px 0px, 100% 0, 100% 100%, 0 100%);
+	-webkit-clip-path: polygon(0 28px, 1px 26px, 2px 25px, 4px 24px, 18px 24px, 20px 23px, 21px 22px, 22px 20px, 22px 4px, 23px 2px, 24px 1px, 26px 0px, 100% 0, 100% 100%, 0 100%);
+}
+/* ------------------ */
+
+/* FEATURED CONTENT */
+main > section:nth-of-type(2) {
+	display: flex;
+	padding-inline: 10%;
+	padding-block: 0.2em;
+	justify-content: space-around;
+	align-items: center;
+	border-top: solid 0.2em black; 
+	border-bottom: solid 0.2em black; 
+	background-color: rgba(0,0,0,0.3);
+}
+
+/* CONTENT */
+main > section:nth-of-type(2) > h3 {
+	text-transform: uppercase;
+	text-align: center;
+	color: #83949D;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+/* FEATURED */
+main > section:nth-of-type(2) > h3::before {
+	content: 'featured';
+	font-weight: 400;
+	color: white;
+}
+
+/* FEATURED CONTENT buttons */
+main > section:nth-of-type(2) > ul > button {
+	cursor: pointer;
+	width: 7em;
+    padding: 0 0.3em;
+    margin: auto;
+    line-height: 2em;
+    height: 2em;
+    text-align: left;
+	border: 0.1em solid #000;
+    border-top-color: rgba(255,255,255,0.5);
+    border-left-color: rgba(255,255,255,0.5);
+	font-size: 1em;
+    font-weight: normal;
+    font-family: "headerfont","Pakenham","Arial Narrow",Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;
+    color: #fff;
+    background-color: #353334;
+    background: -moz-linear-gradient(top, #595554 0%,#595554 35%,#353334 65%,#353334 100%);
+    background: -webkit-linear-gradient(top, #595554 0%,#595554 35%,#353334 65%,#353334 100%);
+    background: linear-gradient(to bottom, #595554 0%,#595554 35%,#353334 65%,#353334 100%);
+}
+
+main > section:nth-of-type(2) > ul > button::after {
+	content: "";
+    float: right;
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 5px;
+    margin-top: 0.8em;
+    border: 1px solid rgba(0,0,0,0.8);
+}
+
+main > section:nth-of-type(2) > ul > button:nth-of-type(1)::after {
+	background-color: #2684de;
+}
+
+main > section:nth-of-type(2) > ul > button:nth-of-type(2)::after {
+	background-color: #f62f36;
+}
+
+main > section:nth-of-type(2) > ul > button:nth-of-type(3)::after {
+	background-color: #47b32a;
+}
+
+main > section:nth-of-type(2) > ul > button:nth-of-type(4)::after {
+	background-color: #f136a1;
+}
+
+main > section:nth-of-type(2) > ul > button:nth-of-type(5)::after {
+	background-color: #c64be2;
+}
+
+main > section:nth-of-type(2) > ul > button:nth-of-type(6)::after {
+	background-color: #fad4c5;
+}
+
+/* FOOTER */
+
+footer {
+	background-image: linear-gradient(#312E45, #554C53);
+	width: auto;
+	height: auto;
+}
+
+footer > section {
+	padding-top: 1em;
+}
+
+footer > section > span {
+	display: flex;
+	justify-content: space-evenly;
+    flex-direction: row;
+	padding-inline: 10%;
+}
+
+footer > section > span > section > ul > li > a {
+	color: #fda238;
+	text-decoration: none;
+	font-size: small;
+}
+
+footer > section > span > section > ul > li > a:hover {
+	color: white;
+}
+
+footer > section > div {
+	background-image: url("//img.ngfiles.com/bg-footer/footer-skyline.webp?cached=1707337411");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 8em;
+}
+
+/* NEXT PAGE --> Community*/
+
+[class="community"] {
+
+	button:hover {
+		background-color: #fff;
+		color: #ff530e;
+	}
+
+	/* MAIN GRID | main > background-img > main content (grid) */
+	main > section:nth-of-type(1) > section:nth-of-type(1) {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-auto-flow: row dense;
+		gap: 1em;
+		padding-inline: 20%;
+	}
+
+	/* GRID ITEMS */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section {
+		outline: solid 0.2em rgba(0, 0, 0, 0.8);
+		background-color: black;
+		border-radius: .3em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) button {
+		transition: 0.2s;
+		display: inline-block;
+		cursor: pointer;
+		text-align: center;
+		padding: 0.5em;
+		border-radius: 10px;
+		font-size: 1em;
+		color: #fff;
+		font-weight: 900;
+		background-color: #ff530e;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) button:hover{
+		background-color: #fff;
+		color: #ff530e;	
+	}
+
+	/* GRID ITEM HEADER */
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section > div {
+		display: flex;
+		align-items: center;
+		background-image: linear-gradient(#4D565D, #202427);
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section > div > img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		background-color: rgba(0,0,0,0.5);
+		width: 2.5em;
+		height: 2.5em;
+		padding: .1em;
+		border-radius: 0.2em;
+		margin-right: 0.3em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section > div > h1 {
+		font-family: 'Pakenham';
+		font-size: 2em;
+	}
+
+	/* GRID ITEM Padding (outside of the flexbox) */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section > section {
+		padding: .4em;
+	}
+
+	/* ------------------------------ */
+
+	/* USER OF THE DAY (main > section(1) > section(1) > section(1) ------------- */
+	/* User of the Day h4 */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul {
+		margin: 0.4em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul > li {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		padding-block: 0.2em;
+	}
+	
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul > li > div {
+		text-align: center;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul > li > div > h4 {
+		color: #fda238;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul > li > div > p {
+		font-size: 0.8em;
+		color: lightgray;
+		font-weight: bold;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul > li:nth-of-type(1) div > p:nth-of-type(2) {
+		color: red;
+	}
+	
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul > li:nth-of-type(2) div > p:nth-of-type(2) {
+		color: #f136a1;
+	}
+	
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > ul > li:nth-of-type(3) div > p:nth-of-type(2) {
+		color: lightgreen;
+	}
+	
+
+
+	/* USER OF THE DAY END --------- */
+
+	/* COMMUNITY PAGE */
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div {
+		padding: 0.5em;
+		p {
+			font-size: 0.8em;
+		}
+
+		input {
+			display: inline-block;
+			width: 100%;
+			padding: 0.8em 1.2em;
+			margin: 8px 0;
+			outline: solid 0.08em #ccc;
+			border-radius: 5%;
+			box-sizing: border-box;
+		}
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) article {
+		padding: 0.5em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) article > input {
+		padding: 0.5em;
+		width: 100%;
+	}
+
+
+
+	/* NEWEST SUPPORTER (main > section(1) > section(1) > section(3) */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(3) > ul {
+		padding: 0.5em 0.3em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(3) > ul > li {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		padding: 0.55em;
+		margin-bottom: 0.4em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(3) > ul > li:nth-child(even) {
+		background-color: rgba(255,255,255, 0.1);
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(3) > ul > li > div > a {
+		font-weight: bold;
+		color: #fda238;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(3) > ul > li > div > a:hover {
+		color: white;
+	}
+
+
+	/* ------- */
+
+	/* MOVERS & SHAKERS (main > section(1) > section(1) > section(4) */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul {
+		padding: 0.5em 0.3em;
+		text-align: center;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.7em;
+		margin-bottom: 0.4em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li:nth-child(odd) {
+		background-color: rgba(255,255,255, 0.1);
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div > a {
+		text-decoration: none;
+		color: #fda238;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div > a:hover {
+		color: white;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div > button {
+		background: linear-gradient(to bottom, #34393D 0%, #34393D 60%, #4E575E 70%, #4E575E 100%);
+		border: 2px solid #34393D;
+		color: #fda238;
+		font-weight: bold;
+		font-size: 0.7em;
+		border-radius: 0%;
+		transition: 0.2s;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div > button:hover {
+		font-size: 0.9em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div > button:focus {
+		font-size: 0.9em;
+	}
+	
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div:nth-of-type(1) {
+		display: flex;
+		gap: 0.6em;
+		align-items: center;
+		font-weight: bold;
+		color: #fda238;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div:nth-of-type(1):hover {
+		cursor: pointer;
+		color: white;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(4) > ul > li > div:nth-of-type(2) {
+		font-size: 0.8em;
+		color: lightgray;
+	}
+
+
+	/* ----------------- */
+	/* NEWGROUNDS LIVE */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(5) > section {
+		display: flex;
+		flex-direction: column;
+		margin: 0.3em;
+		outline: solid 1px rgba(255, 255, 255, 0.1);
+		background-color: #0F0B0C;
+	} 
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(5) > section > a {
+		color: #fda238;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: .8em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(5) > section > a:hover {
+		color: white;
+	};
+	
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(5) > section > p {
+		color: gray;
+		font-size: .7em;
+	}
+	/* ------------------- */
+	/* NEWGROUNDS LIVE END */
+
+	/* HELP WANTED */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(6) > ul {
+		padding: 0.5em 0.3em;
+		text-align: center;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(6) > ul > li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: rgba(255,255,255, 0.1);
+		padding: 0.7em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(6) > ul > li > div:nth-of-type(1) {
+		display: flex;
+		gap: 0.6em;
+		align-items: center;
+		font-weight: bold;
+		color: #fda238;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(6) > ul > li > div:nth-of-type(1):hover {
+		color: white;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(6) > ul > li > div:nth-of-type(2) {
+		font-size: 0.8em;
+		color: lightgray;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(6) > ul > li > div > a {
+		color: #fda238;
+		text-decoration: none;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(6) > ul > li > div > a:hover {
+		color: white;
+	}
+	/* --------------  */
+	/* HELP WANTED END */
+
+	/* ARTIST NEWS NTH OF TYPE 7 */
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(7) > ul {
+		padding: 0.5em 0.3em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(7) > ul > li {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		padding: 0.55em;
+		margin-bottom: 0.4em;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(7) > ul > li:nth-child(odd) {
+		background-color: rgba(255,255,255, 0.1);
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(7) > ul > li > div > a {
+		color: #fda238;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(7) > ul > li > div > a:hover {
+		color:white; 
+	}
+
+
+	main > section:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(7) > ul > li > div > a::after {
+		content: " says...";
+		color: darkgray;
+		font-weight: normal;
+	}
+	/* ----------------- *
+	/* ARTIST NEWS END*/
+}
+
+.red {
+	transition: 1s;
+	border: solid .4em red;
+}
